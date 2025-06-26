@@ -35,7 +35,6 @@
 #define USE_BARO_DPS310
 #define USE_FLASH
 #define USE_FLASH_W25Q128FV
-#define USE_ADC
 
 #define MOTOR1_PIN           PE14
 #define MOTOR2_PIN           PE11
@@ -71,15 +70,15 @@
 
 #define TIMER_PIN_MAPPING \
     TIMER_PIN_MAP(0, PE14, 1, 0)  /* MOTOR1,      TIM1 CH4 */ \
-    TIMER_PIN_MAP(1, PE11, 1, 0)  /* MOTOR2,      TIM1 CH2 */ \
-    TIMER_PIN_MAP(2, PE13, 1, 0)  /* MOTOR3,      TIM1 CH3 */ \
-    TIMER_PIN_MAP(3, PE9 , 1, 0)  /* MOTOR4,      TIM1 CH1 */ \
+    TIMER_PIN_MAP(1, PE11, 1, 1)  /* MOTOR2,      TIM1 CH2 */ \
+    TIMER_PIN_MAP(2, PE13, 1, 2)  /* MOTOR3,      TIM1 CH3 */ \
+    TIMER_PIN_MAP(3, PE9 , 1, 3)  /* MOTOR4,      TIM1 CH1 */ \
     TIMER_PIN_MAP(4, PA3 , 1, -1) /* GYRO1_CLKIN, TIM2 CH4 */ \
     TIMER_PIN_MAP(5, PC7 , 1, -1) /* BEEPER,      TIM3 CH2 */ \
-    TIMER_PIN_MAP(6, PD12, 1, 0)  /* LED_STRIP,   TIM4 CH1 */
+    TIMER_PIN_MAP(6, PD12, 1, 4)  /* LED_STRIP,   TIM4 CH1 */
 
-#define ADC1_DMA_OPT        0
-#define ADC2_DMA_OPT        0
+#define ADC1_DMA_OPT        8
+#define ADC2_DMA_OPT        9
 
 #define BARO_I2C_INSTANCE I2CDEV_1
 

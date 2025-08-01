@@ -34,7 +34,7 @@
 #define USE_BARO
 #define USE_BARO_DPS310
 #define USE_FLASH
-#define USE_FLASH_W25Q128FV
+#define USE_FLASH_M25P16
 
 #define MOTOR1_PIN           PE14
 #define MOTOR2_PIN           PE11

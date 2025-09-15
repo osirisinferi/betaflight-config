@@ -78,7 +78,7 @@
     TIMER_PIN_MAP(6, PD12, 1, 4)  /* LED_STRIP,   TIM4 CH1 */
 
 #define ADC1_DMA_OPT        8
-#define ADC2_DMA_OPT        9
+#define ADC3_DMA_OPT        9
 
 #define BARO_I2C_INSTANCE I2CDEV_1
 

@@ -44,40 +44,42 @@
 #define UART2_TX_PIN         PD5
 #define UART3_TX_PIN         PD8
 #define UART5_TX_PIN         PC12
+#define UART8_TX_PIN         PE1
 #define UART1_RX_PIN         PB7
 #define UART2_RX_PIN         PD6
 #define UART3_RX_PIN         PD9
 #define UART4_RX_PIN         PD0 // Telemetry
 #define UART5_RX_PIN         PD2
-#define UART6_RX_PIN         PA8 // SBUS
+#define UART7_RX_PIN         PA8 // SBUS
+#define UART8_RX_PIN         PE0
 #define I2C1_SCL_PIN         PB8
 #define I2C2_SCL_PIN         PB10
 #define I2C1_SDA_PIN         PB9
 #define I2C2_SDA_PIN         PB11
 #define LED0_PIN             PE2
 #define SPI1_SCK_PIN         PA5
-#define SPI3_SCK_PIN         PB3
+#define SPI2_SCK_PIN         PB13
 #define SPI1_SDI_PIN         PA6
-#define SPI3_SDI_PIN         PB4
+#define SPI2_SDI_PIN         PB14
 #define SPI1_SDO_PIN         PA7
-#define SPI3_SDO_PIN         PB5
+#define SPI2_SDO_PIN         PB15
 #define ADC_VBAT_PIN         PC0
 #define ADC_CURR_PIN         PC1
 #define PINIO1_PIN           PE3
-#define FLASH_CS_PIN         PA15
+#define FLASH_CS_PIN         PB12
 #define GYRO_1_EXTI_PIN      PC4
 #define GYRO_1_CS_PIN        PA4
 #define GYRO_1_CLKIN_PIN     PA3
 #define LED_STRIP_PIN        PD12
-#define BEEPER_PIN           PA9
+#define BEEPER_PIN           PA1
 
 #define TIMER_PIN_MAPPING \
-    TIMER_PIN_MAP(0, PC8,  2,  0) /* MOTOR1,      TIM8 CH3 */ \
-    TIMER_PIN_MAP(1, PC9,  2,  1) /* MOTOR2,      TIM8 CH4 */ \
-    TIMER_PIN_MAP(2, PC7,  2,  2) /* MOTOR3,      TIM8 CH2 */ \
-    TIMER_PIN_MAP(3, PC6,  2,  3) /* MOTOR4,      TIM8 CH1 */ \
+    TIMER_PIN_MAP(0, PC8,  1,  0) /* MOTOR1,      TIM3 CH3 */ \
+    TIMER_PIN_MAP(1, PC9,  1,  1) /* MOTOR2,      TIM3 CH4 */ \
+    TIMER_PIN_MAP(2, PC7,  1,  2) /* MOTOR3,      TIM3 CH2 */ \
+    TIMER_PIN_MAP(3, PC6,  1,  3) /* MOTOR4,      TIM3 CH1 */ \
     TIMER_PIN_MAP(4, PA3,  1, -1) /* GYRO1_CLKIN, TIM2 CH4 */ \
-    TIMER_PIN_MAP(5, PA9,  1, -1) /* BEEPER,      TIM1 CH2 */ \
+    TIMER_PIN_MAP(5, PA1,  2, -1) /* BEEPER,      TIM5 CH2 */ \
     TIMER_PIN_MAP(6, PD12, 1,  4) /* LED_STRIP,   TIM4 CH1 */
 
 #define ADC1_DMA_OPT        8
@@ -89,12 +91,12 @@
 #define DEFAULT_BLACKBOX_DEVICE      BLACKBOX_DEVICE_FLASH
 #define DEFAULT_CURRENT_METER_SOURCE CURRENT_METER_ADC
 #define DEFAULT_VOLTAGE_METER_SOURCE VOLTAGE_METER_ADC
+#define DEFAULT_DSHOT_BITBANG        DSHOT_BITBANG_ON
 #define PINIO1_BOX                   40
 #define PINIO1_CONFIG                129
 #define BOX_USER1_NAME               "10V BEC"
-#define FLASH_SPI_INSTANCE           SPI3
 #define GYRO_1_SPI_INSTANCE          SPI1
 #define GYRO_1_ALIGN                 CW180_DEG
-#define DEFAULT_DSHOT_BITBANG        DSHOT_BITBANG_ON
+#define FLASH_SPI_INSTANCE           SPI2
 #define BEEPER_INVERTED
 

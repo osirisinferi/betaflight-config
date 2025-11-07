@@ -85,8 +85,8 @@
 #define ADC1_DMA_OPT        8
 #define ADC3_DMA_OPT        9
 
-#define BARO_I2C_INSTANCE            I2CDEV_2
-#define MAG_I2C_INSTANCE             I2CDEV_1
+#define BARO_I2C_INSTANCE            I2CDEV_1
+#define MAG_I2C_INSTANCE             I2CDEV_2
 
 #define DEFAULT_BLACKBOX_DEVICE      BLACKBOX_DEVICE_FLASH
 #define DEFAULT_CURRENT_METER_SOURCE CURRENT_METER_ADC
